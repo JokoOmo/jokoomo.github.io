@@ -1,0 +1,506 @@
+/*
+  This stylesheet is based on a wordpress theme called snc mono.
+  Stripped down and updated for use on heterodoxnews.com
+
+  Original Theme Info
+  -------------------
+  Theme Name: SnC Mono
+  Description: Simple and clean theme. Got horizontal, drop-down, "tab" like menu and minimalistic design. Theme options allow you to choose your own colors for header and background. Also they allow you to show or hide info bar, edit footer and more. Enjoy.
+  Version: 0.30
+  Author: Tiper Loc
+  Author URI: http://threecircles.pl/
+  Theme URI: http://threecircles.pl/#projects
+  License: GNU General Public License - Version 3, 29 June 2007
+  License URI: http://www.gnu.org/licenses/gpl.html
+  Tags: white, light, gray, two-columns, translation-ready, custom-background, custom-header, custom-menu, theme-options, right-sidebar
+*/
+
+@font-face {
+    font-family: 'OpenSans';
+    src: url('images/OpenSans-Regular.ttf');
+}
+body {
+    margin: 0;
+    font-size: 8pt;
+    font-family: OpenSans, Tahoma, Arial, Verdana;
+    color: #222;
+}
+a { color: #000; }
+a:hover { text-decoration: underline; }
+a img { border: 0; }
+blockquote { color: #666; }
+dl { padding: 3px 0; }
+dt { 
+    font-weight: 700;
+    color: #444;
+}
+dd { padding: 5px 0 10px; }
+hr { 
+    height: 0;
+    border: 0;
+    border-style: solid;
+    border-top-width: 1px;
+}
+input, select, textarea { font-family: OpenSans, Tahoma, Arial, Verdana; }
+input, select { color: #444; }
+input:focus, textarea:focus { box-shadow: 0px 0px 8px   a(102, 0, 51, 0.5); }
+input[type="text"], input[type="password"] {
+    min-width: 120px;
+    height: 22px;
+}
+input[type="submit"], input[type="reset"] {
+    padding: 5px 15px 5px 15px;
+    color: #404040;
+    text-shadow: 0 1px 1px #fff;
+    cursor: pointer;
+    cursor: hand;
+    border: solid 1px #808080;
+    border-radius: 0.5em;
+    -moz-border-radius: 0.5em;
+    -webkit-border-radius: 0.5em;
+    background-image: -ms-linear-gradient(top, #FFFFFF 0%, #CFCFCF 100%);
+    background-image: -moz-linear-gradient(top, #FFFFFF 0%, #CFCFCF 100%);
+    background-image: -o-linear-gradient(top, #FFFFFF 0%, #CFCFCF 100%);
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #FFFFFF), color-stop(1, #CFCFCF));
+    background-image: -webkit-linear-gradient(top, #FFFFFF 0%, #CFCFCF 100%);
+    background-image: linear-gradient(to bottom, #FFFFFF 0%, #CFCFCF 100%);
+}
+input[type="submit"]:hover, input[type="reset"]:hover {
+    color: #202020;
+    border: solid 1px #404040;
+}
+textarea {
+    min-width: 400px;
+    height: 100px;
+    padding: 3px;
+    margin: 10px 0;
+    font-size: 8pt;
+    color: #666;
+    background-color: #f4f4f4;
+    border: solid 1px #aaa;
+    border-radius: 3pt;
+    -moz-border-radius: 3pt;
+    -webkit-border-radius: 3pt;
+}
+
+/* WordPress Core styles */
+
+.alignnone {
+    margin: 5px 20px 20px 0;
+}
+.aligncenter, div.aligncenter {
+    display:block;
+    margin: 5px auto 5px auto;
+}
+.alignright {
+    float:right;
+    margin: 5px 0 20px 20px;
+}
+.alignleft {
+    float:left;
+    margin: 5px 20px 20px 0;
+}
+.aligncenter {
+    display: block;
+    margin: 5px auto 5px auto;
+}
+a img.alignright {
+    float:right;
+    margin: 5px 0 20px 20px;
+}
+a img.alignnone {
+    margin: 5px 20px 20px 0;
+}
+a img.alignleft {
+    float:left;
+    margin: 5px 20px 20px 0;
+}
+a img.aligncenter {
+    display: block;
+    margin-left: auto;
+    margin-right: auto
+}
+.wp-caption {
+    max-width: 96%; /* Image does not overflow the content area */
+    padding: 5px 3px;
+    text-align: center;
+    line-height: 3em;
+    color: #303030;
+    border: 1px solid #b0b0b0;
+    background-color: #f0f0f0;
+}
+.wp-caption.alignnone {
+    margin: 5px 20px 20px 0;
+}
+.wp-caption.alignleft {
+    margin: 5px 20px 20px 0;
+}
+.wp-caption.alignright {
+    margin: 5px 0 20px 20px;
+}
+.wp-caption img {
+    border: solid 1px #b0b0b0;
+    height: auto;
+    margin:0;
+    max-width: 98.5%;
+    padding:0;
+    width: auto;
+}
+.wp-caption p.wp-caption-text {
+    font-size:11px;
+    line-height:17px;
+    margin:0;
+    padding:0 4px 5px;
+}
+.gallery-caption {
+}
+
+/* Style those if you want to use them. */
+
+.sticky {
+}
+.bypostauthor {
+}
+
+/* end of WordPress Core styles */
+
+.clear {
+    clear: both;
+}
+#show_message {
+    width: 100%;
+    height: 20px;
+    margin:  15px auto 20px auto;
+    padding-top: 6px;
+    font-size: 8pt;
+    text-align: center;
+    color: #888;
+    background-color: #f4f4f4;
+    border-top: solid 1pt #ccc;
+    border-bottom: solid 1pt #ccc;
+}
+#foofo {
+    padding-top: 40px;
+    line-height: 50px;
+    text-align: center;
+    font-size: 12pt;
+}
+
+/* top */
+
+#top {
+    width: 100%;
+    box-shadow: inset 0 -10px 20px rgba(71, 31, 90, 0.35);
+}
+#top_content {
+    width: 900px;
+    min-height: 170px;
+    position: relative;
+    margin: auto;
+}
+#header {
+    padding: 20px 0 65px;
+}
+#header .image, #header .text {
+    display: inline-block;
+}
+#header .image {
+    padding-right: 20px;
+}
+#header .text .title {
+    font-size: 3em;
+    text-decoration: none;
+}
+#header .text a {
+    text-decoration: none;
+}
+#header .text .description {
+    font-size: 1em;
+}
+#links {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+#links .horizontal_menu {
+    padding: 0;
+    margin: 0;
+}
+#links .horizontal_menu a {
+    color: rgba(71, 31, 90, 0.9);
+    text-decoration: none;
+}
+#links .horizontal_menu ul {
+    padding: 0;
+    margin: 0;
+}
+#links .horizontal_menu li {
+    display: inline-block;
+    position: relative;
+}
+#links .horizontal_menu li div {
+    height: 19px;
+    padding: 8px 10px 0;
+    margin-right: 8px;
+    text-align: center;
+    color: #505050;
+    background-color: #ccc;
+    border-top-left-radius: 0.6em;
+    border-top-right-radius: 0.6em;
+}
+#links .horizontal_menu li ul {
+    z-index: 1;
+    min-width: 80px;
+    display: none;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    padding: 3px;
+    background-color: #fff;
+    border: solid 1px #ccc;
+    border-radius: 0.8em;
+    box-shadow: 0 0 5px #ccc;
+}
+#links .horizontal_menu .children .page_item div, #links .horizontal_menu .sub-menu .menu-item div {
+    min-width: 60px;
+    padding: 5px 10px 0;
+    margin: 3px;
+    background-color: #fff;
+    border-bottom: solid 1px #ccc;
+    border-radius: 0;
+}
+#links .horizontal_menu li:hover > ul { display: block; }
+#links .horizontal_menu .children .page_item div:hover, #links .horizontal_menu .sub-menu .menu-item div:hover, #links .children .current_page_item div, #links .sub-menu .current-menu-item div {
+    background-color: #eee !important;
+}
+#main {
+    width: 900px;
+    margin: auto;
+}
+#content {
+    float: left;
+    width: 550px;
+    padding: 25px 25px 0 25px;
+    word-wrap: break-word;
+}
+
+/* post */
+
+.post {
+    margin-bottom: 50px;
+}
+.post a {
+    color: #444;
+}
+.post a:hover {
+    color: #000;
+}
+.post hr {
+    border-color: #d0d0d0;
+}
+.post_title {
+    float: left;
+    font-size: 18pt;
+    text-decoration: none;
+}
+.post_title a {
+    text-decoration: none;
+    color: #444;
+}
+.post_title a:hover {
+    text-decoration: none;
+}
+.post_date {
+    float: right;
+    padding-top: 16px;
+    color: #888;
+}
+.post_date a {
+    text-decoration: none;
+}
+.post_date a:hover {
+    text-decoration: none;
+}
+.post_info {
+    padding: 5px;
+    font-size: 0.9em;
+    color: #606060;
+    background-color: #f0f0f0;
+}
+.post_info a {
+    text-decoration: underline;
+    color: #606060;
+}
+.post_info a:hover {
+    color: #000;
+}
+.post_content {
+    padding: 15px 0;
+    text-align: justify;
+    line-height: 17px;
+}
+.post_content embed { width: 550px }
+.post_content img {
+    max-width: 100%;
+    border: solid 1px #ccc;
+}
+.post_pages {
+    clear: both;
+    float: left;
+    padding: 5px 10px;
+    margin-top: 15px;
+    color: #404040;
+    border: solid 1px #c0c0c0;
+    border-radius: 0.8em;
+    -moz-border-radius: 0.8em;
+    -webkit-border-radius: 0.8em;
+    background-color: #f0f0f0;
+}
+.post_pages:hover {
+    background: none;
+}
+.post_pages .link {
+    margin-left: 5px;
+    font-weight: 700;
+    color: #404040;
+}
+.post_pages a .link {
+    text-decoration: none;
+    font-weight: 400;
+}
+.post_pages a .link:hover {
+    font-weight: 700;
+    color: #000;
+}
+.post_pages a .more-link:hover { color: #000; }
+.post_nav {
+    padding: 10px 0 60px;
+    text-align: center;
+    font-size: 1.1em;
+}
+.post_nav a {
+    display: inline-block;
+    padding: 5px 15px;
+    margin: 0 5px;
+    text-decoration: none;
+    color: #404040;
+    background-color: #f0f0f0;
+    border: solid 1px #a0a0a0;
+    border-radius: 0.5em;
+}
+.post_nav a:hover {
+    color: #202020;
+    background-color: #e0e0e0;
+    border-color: #808080;
+}
+/* sidebar */
+
+#sidebar_column {
+    float: right;
+    width: 250px;
+    padding: 25px 25px 0;
+}
+#sidebar_column ul {
+    padding-left: 40px;
+    list-style-type: none;
+}
+#sidebar_column li h2 {
+    text-indent: 0.5em;
+    line-height: 2em;
+    font-size: 1.3em;
+    font-weight: 400;
+    color: #202020;
+    border-bottom: dotted 1px #202020;
+}
+#sidebar_column li h2 a {
+    text-decoration: none;
+    color: #202020;
+}
+#sidebar_column li select {
+    width: 210px;
+    padding: 3px 8px 3px 8px;
+    margin-bottom: 25px;
+    background-color: #ffffff;
+    border: solid 1px #cccccc;
+}
+
+#sidebar_column ul ul, #sidebar_column ul div {
+    padding-left: 15px;
+    padding-bottom: 25px;
+}
+#sidebar_column ul ul a {
+    text-decoration: none;
+    line-height: 13pt;
+    font-size: 8pt;
+    color: #666;
+}
+#sidebar_column ul ul a:hover {
+    text-decoration: underline;
+    color: #000;
+}
+#search {
+    position: relative;
+    padding: 0 !important;
+}
+#search_bar {
+    width: 170px;
+    height: 22px;
+    padding: 3px 30px 3px 8px;
+    line-height: 22px;
+    background-color: #fff;
+    border: solid 1px #ccc;
+    border-radius: 1em;
+    -moz-border-radius: 1em;
+    -webkit-border-radius: 1em;
+}
+#search_bar:hover { border-color: #a0a0a0; }
+.search_bar_active {
+    font-size: 9pt;
+    color: #666;
+}
+.search_bar_inactive {
+    font-size: 8pt;
+    color: #888;
+}
+#search_icon {
+    position: absolute;
+    top: 4px;
+    right: 10px;
+}
+
+/* footer */
+
+#footer {
+    width: 800px;
+    padding: 12px 0 60px;
+    margin: 20px auto 0;
+    text-align: center;
+    color: #999;
+    border-top: solid 1px #ddd;
+}
+#footer a {
+    color: #888;
+}
+#footer a:hover {
+    color: #000;
+    text-decoration: underline;
+}
+
+/*
+
+Style overrides that were inline in the original theme
+
+*/
+
+body { 
+    background-color: #fff; 
+}
+#links .horizontal_menu div:hover, #links .current_page_item div {
+    background-color: #fff !important;
+}
+#top {
+    background-color: rgba(71, 31, 90, 0.9); 
+}
+#header, #header a {
+    color: #fff; 
+}
