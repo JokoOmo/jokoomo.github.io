@@ -1,0 +1,2 @@
+# ErgodicityAntrag
+ Ideensammlung für Forschungsantrag
